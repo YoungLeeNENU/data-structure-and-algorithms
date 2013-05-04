@@ -1,0 +1,12 @@
+array/adt.h
+linear_list/adt.h
+queue/adt.h
+sort/adt.c
+sort/adt.h
+sort/bubble_sort.c
+sort/insertion_sort.c
+sort/merge_sort.c
+sort/selection_sort.c
+stack/adt.h
+string/adt.h
+tree/adt.h
