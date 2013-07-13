@@ -95,7 +95,7 @@ binary_insertion_sort(register container *unsorted)
             {
                 left = mid + 1;
             }
-            /* mid = (right + left) / 2; */
+                /* mid = (right + left) / 2; */
         }
 
         printf ("replace the element: %d[%d]\n", unsorted -> sample[mid], mid);
