@@ -7,7 +7,11 @@
 
 int main(int argc, char *argv[])
 {
-    init_List (FIRST_INIT, llist);
+    llist * sample;
+    
+    sample = init_List (FIRST_INIT, llist);
+
+    destroy_list (sample);
 
     return 0;
 }

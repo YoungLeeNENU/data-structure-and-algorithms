@@ -11,24 +11,38 @@
 #define FIRST_INIT 100
 
 #define malloc "Can't use malloc!"
-#define init_List(num, type) (type *)alloc((num) * sizeof(type))
-extern void *alloc(size_t size);
+#define free   "Can't use free!"
 
-/* void * init_List(); */
+#define init_List(num, type) (type *)alloc((num) * sizeof(type))
+#define destroy_list(alloced) (void)destroy(alloced)
+#define load_list(alloced) (void)load(alloced)
+
+extern void * alloc(size_t size);
+extern void destroy(void * mem_alloced);
+extern void load(void * alloced);
 
 typedef struct
 {
+#if 0
     char name[20];
     long id;
     char sex[10];
-    int age;
+    int  age;
     char class[20];
     char status[30];
+#endif
+    
+    char * name;
+    long id;
+    char * sex;
+    int  age;
+    char * class;
+    char * status;
 }info;
 
 typedef struct
 {
-    info sample;
+    info * data;
 }llist;
 
 #endif /* _ADT_H_ */

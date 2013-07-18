@@ -6,10 +6,11 @@
 #include "adt.h"
 
 #undef malloc
+#undef free
 
 /**
- * @Type: Show array's elements
- * @Status: TODO
+ * @Type: Init the Liner list
+ * @Status: DONE
  */
 void *
 alloc(size_t size)
@@ -17,7 +18,6 @@ alloc(size_t size)
     void * new_mem;
 
     new_mem = malloc(size);
-
     if (NULL == new_mem)
     {
         printf ("out of memory!\n");
@@ -27,19 +27,55 @@ alloc(size_t size)
     return new_mem;
 }
 
-/* #define FUNCTION */
+/**
+ * @Type: Free the space of the Liner list which had been allocated
+ * @Status: DONE
+ */
+void
+destroy(void * mem_alloced)
+{
+    free (mem_alloced);
+}
 
-#ifdef FUNCTION
 
 /**
- * @Type: Show array's elements
+ * @Type: Laod the data into the Liner list
  * @Status: TODO
  */
 void
-destroy_list(register container *llist)
+load(void * mem_alloced)
 {
-    return 0;
+#if 0    
+    info wang = {
+        "王小林", 790631, "男", 18, "计 91", "健康"
+    };
+    info chen = {
+        "陈红", 790632, "女", 20, "计 91", "一般"
+    };
+    info liu = {
+        "刘建平", 790633, "男", 21, "计 91", "健康"
+    };
+    info zhang = {
+        "张立立", 790634, "男", 17, "计 91", "神经衰弱"
+    };
+    
+    llist origin_data = {
+        {
+            wang,
+            chen,
+            liu,
+            zhang
+        },
+        4
+    };
+
+    mem_alloced = &origin_data;
+#endif
 }
+
+/* #define FUNCTION */
+
+#ifdef FUNCTION
 
 /**
  * @Type: Show array's elements

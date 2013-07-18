@@ -9,7 +9,15 @@ inner_sort/insertion_sort.c
 inner_sort/merge_sort.c
 inner_sort/selection_sort.c
 inner_sort/shell_sort.c
+linear_list/adt.c
 linear_list/adt.h
+linear_list/init_llist.c
+linear_list/testcase/a_client.c
+linear_list/testcase/alloc.c
+linear_list/testcase/alloc.h
+linear_list/testcase/mem_sort.c
+linear_list/testcase/ptest.c
+linear_list/testcase/test.c
 list/adt.c
 list/adt.h
 list/locate_element.c

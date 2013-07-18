@@ -2,20 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define LENGTH 10
-/* #define method1 */
-#define method2
+#define LENGTH 5
 
 int main(int argc, char *argv[])
 {
-        /* char a[10]; */
-        /* strcpy (a, "bomb"); */
-        /* printf ("%s %d\n", a, strlen(a));     */
+    char *pi;
+    int i;
 
-    int *pi;
-    int *pi2, i;
-
-    pi = malloc (25 * sizeof (int));
+    pi = malloc (LENGTH * sizeof (char));
     
     if (NULL == pi)
     {
@@ -23,19 +17,10 @@ int main(int argc, char *argv[])
         exit (1);
     }
 
-    pi2 = pi;
-    for (i= 0; i < 25; i += 1)
-    {
-#ifdef method1
-        *pi2++ = 0;
-#endif /* method1 */
-        
-#ifdef method2
-        pi[i] = 0;        
-#endif /* method2 */        
-        
-        printf ("%d\n", *pi2);
-    }
+    for (i = 0; i < LENGTH; i += 1)
+        scanf ("%c", &pi[i]);
+    
+    printf ("%s\n", pi);
     
     free (pi);
     

@@ -1,7 +1,0 @@
-adt.c
-adt.h
-init_llist.c
-testcase/a_client.c
-testcase/alloc.c
-testcase/alloc.h
-testcase/test.c
